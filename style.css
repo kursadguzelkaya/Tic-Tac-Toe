@@ -1,0 +1,160 @@
+/* UNİVERSAL */
+body {
+    margin: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* STARTİNG PAGE */
+#start-page{
+    background-color: #18e083;
+}
+
+#main {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+}
+
+#main .start-info {
+    padding: 0em;
+    text-align: center;
+}
+
+#main .start-info #main-header {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+#main .start-info h1 {
+    margin: auto;
+    color: #fff;
+    text-align: left;
+    font-size: 110px;
+    line-height: 0.7em;
+    margin-bottom: 5px;
+}
+
+#main .start-info input{
+    text-align: center;
+    height: 25px;
+    margin-bottom: 15px;
+    width: 70%;
+    border-radius: 3px;
+}
+
+#main .start-info .btn{
+    font-size: 18px;
+    color: #18e083;
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+#main .start-info a{
+    color: #18e083;
+    text-decoration: solid;
+}
+
+/* GAME PAGE */
+
+/* Header */
+#header .header-row{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr;
+}
+
+#header .header-row .player {
+    border: #bbb 1px solid;
+}
+
+#header .player h1{
+    text-align: center;
+    margin: 0;
+    font-size: 70px;
+    color: #bbb;
+}
+
+#header .player h4 {
+    text-align: center;
+    margin: 0;
+}
+
+#header .player-O {
+    background-color: darkorange;
+}
+
+#header .player-X{
+    background-color: blue;
+}
+
+#header .player-O h1, #header .player-X h1 {
+    color: #fff;
+}
+
+#header #game-name .wraper {
+    margin: auto;
+    text-align: center;
+    width: 50px;
+}
+
+#header #game-name h1 {
+    margin-top: 15px;
+    text-align: left;
+    line-height: 0.6em;
+    font-size:40px;
+}
+
+/* Game Board */
+#board {
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+}
+
+#board #board-boxes {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#board #board-boxes .box {
+    height: 150px;
+    background-color: #eee;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#board #board-boxes .hover-box {
+    font-size: 140px;
+    text-align: center;
+    color: #fff;
+    padding-bottom:5px ;
+    
+}
+
+#board #board-boxes .clicked-box-O {
+    font-size: 140px;
+    text-align: center;
+    background-color: darkorange;
+    color: #fff;
+    padding-bottom:5px
+
+}
+
+#board #board-boxes .clicked-box-X {
+    font-size: 140px;
+    text-align: center;
+    background-color: blue;
+    color: #fff;
+    padding-bottom:5px
+
+}
