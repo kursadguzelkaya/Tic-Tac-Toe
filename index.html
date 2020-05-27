@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body id="start-page">
+    <section id="main">
+        <div class="start-info">
+            <header id="main-header">
+                <h1>Tic Tac Toe</h1>
+            </header>
+            <form id="input-form" >
+                <input id="first-name" type="text" placeholder="Player 1 Name">
+                <input id="second-name" type="text" placeholder="Player 2 Name">
+                <button class="btn " type="submit">Start Game</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+
+        const form = document.getElementById('input-form');
+
+        //Add Start Game event
+        form.addEventListener('submit',startGame);
+
+        function startGame(e){
+            e.preventDefault();
+
+            //Get names from inputs
+            const nameOne = document.getElementById('first-name').value;
+            const nameSec = document.getElementById('second-name').value;
+            console.log(nameOne);
+
+            //check names are empty or not
+            if(nameOne==='' || nameSec===''){
+                alert('Please fill the blanks');
+            }else{
+                window.location.href = 'game.html'
+            }
+        }
+    </script>
+</body>
+</html>
