@@ -7,13 +7,17 @@ class Styling{
     //Change style when hover event
 
     //change style of box to hovered
-    static overBox(player){
+    static overBox(){
 
         if(event.target.classList.contains('box') && !event.target.classList.contains(`clicked-box`)){
             const box = event.target
+            const oNameBox = document.getElementById(`name-O`);
+            
+            //find current player
+            let current = oNameBox.classList.contains('player-O') ? 'O' : 'X';
 
             //append a text 
-            box.appendChild(document.createTextNode(player));
+            box.appendChild(document.createTextNode(current));
 
             //add hover class
             box.className = 'box hover-box';
@@ -33,37 +37,34 @@ class Styling{
         }
     }
 
-    static clickedBox(player){
+    //when box is clicked change box style and turned game to next player
+    static clickedBox(){
 
+        //if box not clicked yet
         if(event.target.classList.contains('box') && !event.target.classList.contains(`clicked-box`)){
             const box = event.target;
-            const next = player =='X' ? 'O' : 'X';
+            const oNameBox = document.getElementById(`name-O`);
+            
+            //find current player
+            let current = oNameBox.classList.contains('player-O') ? 'O' : 'X';
 
-            const playerName = document.getElementById(`name-${player}`);
+            //find next player according to current player
+            var next = current =='X' ? 'O' : 'X';
+
+            const currentplayer = document.getElementById(`name-${current}`);
             const nextPlayer = document.getElementById(`name-${next}`);
 
-            //change current player
-            playerName.className ='player';
+            //change current player box
+            currentplayer.className ='player';
             nextPlayer.className = `player player-${next}`;
-            console.log(playerName);
-            
 
             //add clicked class
-            box.className = `box clicked-box clicked-box-${player}`;
-    
+            box.className = `box clicked-box clicked-box-${current}`;
+                
         }
     }
 }
 
-class Game {
-
-    while (True) {
-        
-    }
-}
-
-
-//Add hover event
-boxes.addEventListener('mouseover', e => Styling.overBox('O'));
+boxes.addEventListener('mouseover', Styling.overBox);
 boxes.addEventListener('mouseout', Styling.outBox);
-boxes.addEventListener('click', e => Styling.clickedBox('O'));
+boxes.addEventListener('click', Styling.clickedBox);
