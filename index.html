@@ -20,28 +20,6 @@
         </div>
     </section>
 
-    <script>
-
-        const form = document.getElementById('input-form');
-
-        //Add Start Game event
-        form.addEventListener('submit',startGame);
-
-        function startGame(e){
-            e.preventDefault();
-
-            //Get names from inputs
-            const nameOne = document.getElementById('first-name').value;
-            const nameSec = document.getElementById('second-name').value;
-            console.log(nameOne);
-
-            //check names are empty or not
-            if(nameOne==='' || nameSec===''){
-                alert('Please fill the blanks');
-            }else{
-                window.location.href = 'game.html'
-            }
-        }
-    </script>
+    <script src="game.js"></script>
 </body>
 </html>
