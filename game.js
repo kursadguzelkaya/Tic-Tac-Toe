@@ -32,7 +32,7 @@ class Store{
 }
 
 //if current page is starting page
-if(window.location.href=='http://127.0.0.1:5500/Software/Web%20Design/Tic%20Tac%20Toe/index.html'){
+if(window.location.href=='https://kursadguzelkaya.github.io/Tic-Tac-Toe/'){
     const form = document.getElementById('input-form');
     
     //Add Start Game event
@@ -55,7 +55,7 @@ if(window.location.href=='http://127.0.0.1:5500/Software/Web%20Design/Tic%20Tac%
             Store.addName(nameSec);
 
             //change current page to the game page 
-            window.location.href = 'game.html';
+            window.location.href = 'https://kursadguzelkaya.github.io/Tic-Tac-Toe/game.html';
         }
     });
 }
@@ -140,7 +140,7 @@ class Styling{
                 Store.addName(currentInfo)
                 
                 //change current page to result page
-                window.location.href = 'result.html' ;
+                window.location.href = 'https://kursadguzelkaya.github.io/Tic-Tac-Toe/result.html' ;
             }else if(numClicked == 9){
                 console.log(1)
 
@@ -148,7 +148,7 @@ class Styling{
                 Store.addName(["It's A Tie!!",''])
                 
                 //change current page to result page
-                window.location.href = 'result.html' ;
+                window.location.href = 'https://kursadguzelkaya.github.io/Tic-Tac-Toe/result.html' ;
 
             }
 
@@ -186,7 +186,7 @@ function checkBoard(player){
 }
 
 //if current page is game page
-if(window.location.href=='http://127.0.0.1:5500/Software/Web%20Design/Tic%20Tac%20Toe/game.html'){
+if(window.location.href=='https://kursadguzelkaya.github.io/Tic-Tac-Toe/game.html'){
     const boxes = document.getElementById('board-boxes');
 
     //Return box names to given names
@@ -212,7 +212,7 @@ if(window.location.href=='http://127.0.0.1:5500/Software/Web%20Design/Tic%20Tac%
 //RESULT HTML PAGE
 
 //if current page is result page
-if(window.location.href=='http://127.0.0.1:5500/Software/Web%20Design/Tic%20Tac%20Toe/result.html'){
+if(window.location.href=='https://kursadguzelkaya.github.io/Tic-Tac-Toe/result.html'){
 
     //Return name to name of the winner
     document.getElementById('winner-name').innerHTML = Store.getNames()[Store.getNames().length-1][0];
