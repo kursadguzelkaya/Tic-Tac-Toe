@@ -225,19 +225,14 @@ body {
 
     #header .header-row {
         width: 100%;
-        margin: auto;
+        margin: 20px auto;
         grid-template-columns: 4fr 3fr 4fr;
     }
 
     #board {
         margin: 30px auto;
         width: 90%;
-        height: 450px;
-    }
-
-    #board #board-boxes {
-        width: 95%;
-        margin: auto;
+        height: 400px;
     }
 
     #board #board-boxes .box {
@@ -260,6 +255,10 @@ body {
 
     #result-page .winner #player-char {
         top: -530px;      
+    }
+
+    #result-page #main {
+        margin-top: 50px;
     }
 }
 
