@@ -218,3 +218,48 @@ body {
     border: none;
     padding: 20px 40px;
 }
+
+
+/*FOR UNDER 500px */
+@media(max-width:500px){
+
+    #header .header-row {
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 4fr 3fr 4fr;
+    }
+
+    #board {
+        margin: 30px auto;
+        width: 90%;
+        height: 450px;
+    }
+
+    #board #board-boxes {
+        width: 95%;
+        margin: auto;
+    }
+
+    #board #board-boxes .box {
+        height: 120px;
+    }
+
+    #board #board-boxes .hover-box {
+        font-size: 110px;
+    }
+    
+    #board #board-boxes .clicked-box-O {
+        font-size: 110px; 
+        box-sizing: border-box;
+    }
+    
+    #board #board-boxes .clicked-box-X {
+        font-size: 110px;
+        box-sizing: border-box;
+    }
+
+    #result-page .winner #player-char {
+        top: -530px;      
+    }
+}
+
